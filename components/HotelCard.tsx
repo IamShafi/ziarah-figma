@@ -23,11 +23,12 @@ import {
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import cardImage from "../public/assets/image.png";
-import locationIcon from "../public/assets/location.png"
-import swimIcon from "../public/assets/SwimmingPool.png"
-import wifiIcon from "../public/assets/WifiHigh.png"
-import cityIcon from "../public/assets/city.png"
-import thumbIcon from "../public/assets/thumb_up.png"
+import dextopCardImage from "../public/assets/dextop-image.png";
+import locationIcon from "../public/assets/location.png";
+import swimIcon from "../public/assets/SwimmingPool.png";
+import wifiIcon from "../public/assets/WifiHigh.png";
+import cityIcon from "../public/assets/city.png";
+import thumbIcon from "../public/assets/thumb_up.png";
 
 const hotelImages = [cardImage, cardImage, cardImage, cardImage];
 
@@ -95,7 +96,9 @@ export default function HotelCard() {
 
         <div className="card-content">
           <div className="flex items-start justify-between mb-[12px] mt-4">
-            <h2 className="text[16px] font-airbnbCereal font-airbnbCereal-bold leading-[21px]">Hotel Golden Palace, Puri</h2>
+            <h2 className="text[16px] font-airbnbCereal font-airbnbCereal-bold leading-[21px]">
+              Hotel Golden Palace, Puri
+            </h2>
             <div className="flex gap-0.5">
               {[...Array(4)].map((_, i) => (
                 <Star
@@ -109,7 +112,9 @@ export default function HotelCard() {
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
             {/* <MapPin className="w-4 h-4 color-blue" /> */}
             <Image src={locationIcon} alt="location" width={16} height={16} />
-            <span className="text[14px] font-airbnbCereal font-airbnbCereal-small leading-[18px]">VIP Rd, City, Puri, Odisha 752001</span>
+            <span className="text[14px] font-airbnbCereal font-airbnbCereal-small leading-[18px]">
+              VIP Rd, City, Puri, Odisha 752001
+            </span>
           </div>
 
           <div className="flex items-center gap-1 text-sm text-blue-600 mb-4">
@@ -137,7 +142,13 @@ export default function HotelCard() {
 
           <div className="flex items-center gap-2 mb-4">
             <div className="flex items-center text-[12px] font-airbnbCereal-small font-airbnbCereal bg-[#E1E1E159] bg-opacity-[.35] rounded-[7px] px-[6px] py-[4px]">
-            <Image src={thumbIcon} alt="like" width={16} height={16} className="mr-[6px]"/>
+              <Image
+                src={thumbIcon}
+                alt="like"
+                width={16}
+                height={16}
+                className="mr-[6px]"
+              />
               <span className="font-semibold text-base">4.5</span>
               <span className="text-muted-foreground ml-1">(23 Reviews)</span>
             </div>
@@ -145,117 +156,124 @@ export default function HotelCard() {
 
           <div className="flex items-center justify-between pt-4 border-t">
             <div>
-              <span className="text-[16px] font-airbnbCereal font-airbnbCereal-bold text-primary-blue">₹31,440.87</span>
-              <span className="text-[16px] font-airbnbCereal font-airbnbCereal-small text-primary-grey">/3 nights</span>
+              <span className="text-[16px] font-airbnbCereal font-airbnbCereal-bold text-primary-blue">
+                ₹31,440.87
+              </span>
+              <span className="text-[16px] font-airbnbCereal font-airbnbCereal-small text-primary-grey">
+                /3 nights
+              </span>
             </div>
-            <Button className="font-airbnbCereal font-airbnbCereal-medium leading-[18px] rounded-[4px] bg-white text-primary-blue border border-[#5054D9]">Choose Room</Button>
+            <Button className="font-airbnbCereal font-airbnbCereal-medium leading-[18px] rounded-[4px] bg-white text-primary-blue border border-[#5054D9]">
+              Choose Room
+            </Button>
           </div>
         </div>
       </Card>
 
       {/* Desktop Card */}
-      <Card className="hidden md:flex overflow-hidden w-[1088px] rounded-[16px] px-4 py-[14px] ">
-        <div className="w-1/3 relative overflow-hidden rounded-[16px]">
+      <Card className="hidden md:flex w-[1088px] h-[246px] mx-auto rounded-[16px] p-4 relative">
+        {/* Left Image Section */}
+        <div className="w-[335px] h-[216px] relative overflow-hidden rounded-[16px]">
           <Image
             src={hotelImages[0]}
             alt="Room view"
-            className="w-full h-full object-cover rounded-[16px]"
-            width={335}
-            height={216}
+            className="w-full h-full object-cover"
           />
-          <button className="absolute right-4 top-4">
-            <Heart className="w-6 h-6 text-white  bg-[#9E9E9E59] bg-opacity-[0.35] rounded-full p-2" />
+          <button className="absolute right-4 top-4 bg-black/35 rounded-full p-2">
+            <Heart className="w-6 h-6 text-white" />
           </button>
         </div>
 
-        <div className="flex-1 p-6">
-          <div className="flex justify-between">
-            <div className="flex-1">
-              <div className="flex items-start justify-between mb-2">
-                <div>
-                  <h2 className="text-xl font-semibold mb-1">
-                    Hotel Golden Palace, Puri
-                  </h2>
-                  <div className="flex gap-0.5">
-                    {[...Array(4)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-4 h-4 fill-orange-400 text-orange-400"
-                      />
-                    ))}
-                  </div>
-                </div>
-                <div className="flex gap-2">
-                  <Badge
-                    variant="secondary"
-                    className="bg-blue-50 text-blue-700 hover:bg-blue-50"
-                  >
-                    Best
-                  </Badge>
-                  <Badge
-                    variant="secondary"
-                    className="bg-orange-50 text-orange-700 hover:bg-orange-50"
-                  >
-                    Cheapest
-                  </Badge>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                <MapPin className="w-4 h-4" />
-                <span>VIP Rd, Puri, Odisha-752002</span>
-                <span className="text-sm">34.32 KM from center</span>
-              </div>
-
-              <div className="flex items-center gap-1 text-sm text-blue-600 mb-4">
-                <ExternalLink className="w-4 h-4" />
-                <button className="hover:underline">
-                  View property in map
-                </button>
-              </div>
-
-              <div className="flex gap-4 mb-4">
-                <div className="flex items-center gap-1 text-sm">
-                  <Wifi className="w-4 h-4" />
-                  <span>Free Wifi</span>
-                </div>
-                <div className="flex items-center gap-1 text-sm">
-                  <Pool className="w-4 h-4" />
-                  <span>Swimming Pool</span>
-                </div>
-                <div className="flex items-center gap-1 text-sm">
-                  <Building2 className="w-4 h-4" />
-                  <span>City View</span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <div className="flex items-center text-sm">
-                  <span className="font-semibold text-base">4.5</span>
-                  <span className="text-muted-foreground ml-1">
-                    (23 Reviews)
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-48 flex flex-col items-end">
-              <div className="text-right mb-1">
-                <div className="text-sm text-muted-foreground line-through">
-                  ₹34,440.87
-                </div>
-                <div className="text-2xl font-bold">₹31,440.87</div>
-                <div className="text-xs text-muted-foreground">
-                  Includes Taxes & Charges
-                </div>
-                <div className="text-sm mb-2">3 nights</div>
-                <div className="text-sm text-muted-foreground">
-                  2 Adult, 2 Child
-                </div>
-              </div>
-              <Button className="w-full rounded-full">Choose Room</Button>
+        {/* Middle Content Section */}
+        <div className="flex-1 pl-6 pr-4">
+          <div className="flex  gap-[16px] mb-2 items-start">
+            <h2 className="text-[24px] font-airbnbCereal font-airbnbCereal-bold leading-[31px]">
+              Hotel Golden Palace, Puri
+            </h2>
+            <div className="flex gap-0.5">
+              {[...Array(4)].map((_, i) => (
+                <Star
+                  key={i}
+                  className="w-4 h-4 fill-orange-400 text-orange-400"
+                />
+              ))}
             </div>
           </div>
+
+          <div className="text-[14px] text-[#475569] mb-2">
+            VIP Rd, Puri, Odisha-752002
+          </div>
+
+          <div className="flex items-center gap-1 text-[14px] text-[#3538CD] mb-4">
+            <ExternalLink className="w-4 h-4" />
+            <button className="hover:underline">View property in map</button>
+            <span className="ml-2 text-[#475569]">34.32 KM from center</span>
+          </div>
+
+          <div className="flex gap-4 mb-4">
+            <div className="flex items-center gap-1 text-sm">
+              {/* <Wifi className="w-4 h-4" /> */}
+              <Image src={wifiIcon} alt="wifi" width={16} height={16} />
+              <span>Free Wifi</span>
+            </div>
+            <div className="flex items-center gap-1 text-sm">
+              {/* <Pool className="w-4 h-4" /> */}
+              <Image src={swimIcon} alt="swim" width={16} height={16} />
+              <span>Swimming Pool</span>
+            </div>
+            <div className="flex items-center gap-1 text-sm">
+              {/* <Building2 className="w-4 h-4" /> */}
+              <Image src={cityIcon} alt="city" width={16} height={16} />
+              <span>City View</span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center text-[12px] font-airbnbCereal-small font-airbnbCereal bg-[#E1E1E159] bg-opacity-[.35] rounded-[7px] px-[6px] py-[4px]">
+              <Image
+                src={thumbIcon}
+                alt="like"
+                width={16}
+                height={16}
+                className="mr-[6px]"
+              />
+              <span className="font-semibold text-base">4.5</span>
+              <span className="text-muted-foreground ml-1">(23 Reviews)</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Vertical Divider */}
+        <div className="absolute right-[220px] top-4 bottom-4 w-[1px] bg-[#E2E8F0]" />
+
+        {/* Right Price Section */}
+        <div className="w-[200px] text-right flex flex-col ">
+          <div className="flex gap-2 ml-auto mb-[16px]">
+            <Badge className="bg-[#B8BBFF40] bg-opacity-[.25] text-[#5054D9] hover:bg-[#EEF4FF] font-normal px-3">
+              Best
+            </Badge>
+            <Badge className="bg-[#FFD18140] bg-opacity-[.25] text-[#F99F1D] hover:bg-[#FFF7ED] font-normal px-3">
+              Cheapest
+            </Badge>
+          </div>
+          <div className="flex flex-row items-center gap-2">
+            <div className="text-[14px] text-[#64748B] line-through">
+              ₹34,440.87
+            </div>
+            <div className="text-[24px] font-bold text-[#3538CD]">
+              ₹31,440.87
+            </div>
+          </div>
+          <div className="text-[12px] text-[#64748B]">
+            Includes Taxes & Charges
+          </div>
+          <div className="text-[14px] mt-2">3 nights</div>
+          <div className="text-[14px] text-[#64748B] mb-4">
+            2 Adult, 2 Child
+          </div>
+          <Button className="font-airbnbCereal font-airbnbCereal-medium leading-[18px] rounded-[4px] bg-white text-primary-blue border border-[#5054D9]">
+            Choose Room
+          </Button>
         </div>
       </Card>
     </section>
