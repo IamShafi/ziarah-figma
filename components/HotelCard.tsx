@@ -173,13 +173,58 @@ export default function HotelCard() {
       {/* Desktop Card */}
       <Card className="hidden md:flex w-[1088px] h-[246px] mx-auto rounded-[16px] p-4 relative">
         {/* Left Image Section */}
-        <div className="w-[335px] h-[216px] relative overflow-hidden rounded-[16px]">
+        {/* <div className="w-[335px] h-[216px] relative overflow-hidden rounded-[16px]">
           <Image
             src={hotelImages[0]}
             alt="Room view"
             className="w-full h-full object-cover"
           />
           <button className="absolute right-4 top-4 bg-black/35 rounded-full p-2">
+            <Heart className="w-6 h-6 text-white" />
+          </button>
+        </div> */}
+        <div className="w-[335px] h-[216px] relative overflow-hidden rounded-[16px]">
+          <Carousel
+            setApi={setApi}
+            className="w-full"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+          >
+            <CarouselContent>
+              {hotelImages.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="w-[335px] h-[216px] relative overflow-hidden rounded-[16px]">
+                    <Image
+                      src={image}
+                      alt={`Room view ${index + 1}`}
+                      className="w-full h-full object-cover"
+                      width={320}
+                      height={200}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            {/* <CarouselPrevious className="left-2" />
+            <CarouselNext className="right-2" /> */}
+            <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+              <div className="flex flex-row gap-2 bg-[#9E9E9E59] bg-opacity-[0.35] rounded-[18px] min-w-[54px] px-[5px] py-[5px]">
+                {hotelImages.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`w-2 h-2 rounded-full transition-colors ${
+                      current === index ? "bg-white" : "bg-white/50"
+                    }`}
+                    onClick={() => api?.scrollTo(index)}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </Carousel>
+          <button className="absolute right-4 top-4 z-10 bg-[#9E9E9E59] bg-opacity-[0.35] rounded-full p-2">
             <Heart className="w-6 h-6 text-white" />
           </button>
         </div>
