@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -7,10 +8,10 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const airbnbCereal = localFont({
+  variable: '--font-airbnb-cereal',
+  src: "../public/fonts/AirbnbCereal_W_Md.otf",
+})
 
 export const metadata: Metadata = {
   title: "ziarah",
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${airbnbCereal.variable} antialiased`}
       >
         {children}
       </body>

@@ -8,10 +8,14 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        airbnbCereal: ["var(--font-airbnb-cereal)", "sans-serif"],
       },
+      fontWeight: {
+        'airbnbCereal-small': "400",
+        'airbnbCereal-medium': "500",
+        'airbnbCereal-bold': "700"
+      }
     },
   },
   plugins: [],
