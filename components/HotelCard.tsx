@@ -2,10 +2,10 @@
 
 import {
   Heart,
-  MapPin,
-  Wifi,
+  // MapPin,
+  // Wifi,
   PocketIcon as Pool,
-  Building2,
+  // Building2,
   Star,
   ExternalLink,
 } from "lucide-react";
@@ -16,14 +16,12 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import cardImage from "../public/assets/image.png";
-import dextopCardImage from "../public/assets/dextop-image.png";
+// import dextopCardImage from "../public/assets/dextop-image.png";
 import locationIcon from "../public/assets/location.png";
 import swimIcon from "../public/assets/SwimmingPool.png";
 import wifiIcon from "../public/assets/WifiHigh.png";
@@ -312,8 +310,8 @@ export default function HotelCard() {
           <div className="text-[12px] text-[#64748B]">
             Includes Taxes & Charges
           </div>
-          <div className="text-[14px] mt-2">3 nights</div>
-          <div className="text-[14px] text-[#64748B] mb-4">
+          <div className="text-[16px] text-[#5A5A5A] font-airbnbCereal font-airbnbCereal-small leading-[20.23px]  mt-2">3 nights</div>
+          <div className="text-[14px] text-[#5A5A5A] font-airbnbCereal font-airbnbCereal-small leading-[18.23px] mb-4">
             2 Adult, 2 Child
           </div>
           <Button className="font-airbnbCereal font-airbnbCereal-medium leading-[18px] rounded-[4px] bg-white text-primary-blue border border-[#5054D9]">
