@@ -44,7 +44,7 @@ export default function HotelCard() {
   }, [api]);
 
   return (
-    <section className="container mx-auto px-4 py-20 flex flex-col items-center">
+    <section className="flex flex-col items-center">
       {/* Mobile Card */}
       <Card className="md:hidden overflow-hidden max-w-[337px] rounded-[16px] px-2 pt-2 pb-[12px]">
         <div className="relative">
@@ -154,17 +154,17 @@ export default function HotelCard() {
       </Card>
 
       {/* Desktop Card */}
-      <Card className="hidden md:flex">
-        <div className="w-1/3 relative">
+      <Card className="hidden md:flex overflow-hidden w-[1088px] rounded-[16px] px-4 py-[14px] ">
+        <div className="w-1/3 relative overflow-hidden rounded-[16px]">
           <Image
             src={hotelImages[0]}
             alt="Room view"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-[16px]"
             width={335}
             height={216}
           />
           <button className="absolute right-4 top-4">
-            <Heart className="w-6 h-6 text-white" />
+            <Heart className="w-6 h-6 text-white  bg-[#9E9E9E59] bg-opacity-[0.35] rounded-full p-2" />
           </button>
         </div>
 
