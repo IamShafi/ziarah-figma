@@ -112,14 +112,14 @@ export default function HotelCard() {
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
             {/* <MapPin className="w-4 h-4 color-blue" /> */}
             <Image src={locationIcon} alt="location" width={16} height={16} />
-            <span className="text[14px] font-airbnbCereal font-airbnbCereal-small leading-[18px]">
+            <span className="text-[14px] font-airbnbCereal font-airbnbCereal-small leading-[18px]">
               VIP Rd, City, Puri, Odisha 752001
             </span>
           </div>
 
-          <div className="flex items-center gap-1 text-sm text-blue-600 mb-4">
-            <ExternalLink className="w-4 h-4" />
+          <div className="flex items-center gap-1 text-[12] font-airbnbCereal font-airbnbCereal-small text-primary-blue mb-4">
             <button className="hover:underline">View property in map</button>
+            <ExternalLink className="w-4 h-4" />
           </div>
 
           <div className="flex gap-4 mb-4">
@@ -149,8 +149,8 @@ export default function HotelCard() {
                 height={16}
                 className="mr-[6px]"
               />
-              <span className="font-semibold text-base">4.5</span>
-              <span className="text-muted-foreground ml-1">(23 Reviews)</span>
+              <span className="text-[16px] text-[#000] font-airbnbCereal font-airbnbCereal-medium leading-[20.83px]">4.5</span>
+              <span className="text-[16px] text-[#626262] font-airbnbCereal font-airbnbCereal-small leading-[20.83px] ml-1">(23 Reviews)</span>
             </div>
           </div>
 
@@ -230,11 +230,11 @@ export default function HotelCard() {
         </div>
 
         {/* Middle Content Section */}
-        <div className="flex-1 pl-6 pr-4">
-          <div className="flex  gap-[16px] mb-2 items-start">
-            <h2 className="text-[24px] font-airbnbCereal font-airbnbCereal-bold leading-[31px]">
+        <div className="flex-1 pl-6">
+          <div className="flex  flex-row gap-[16px] mb-4 items-center">
+            <div className="text-[24px] font-airbnbCereal font-airbnbCereal-bold leading-[31px]">
               Hotel Golden Palace, Puri
-            </h2>
+            </div>
             <div className="flex gap-0.5">
               {[...Array(4)].map((_, i) => (
                 <Star
@@ -245,14 +245,14 @@ export default function HotelCard() {
             </div>
           </div>
 
-          <div className="text-[14px] text-[#475569] mb-2">
+          <div className="text-[14px] text-[#626262] font-airbnbCereal font-airbnbCereal-small leading-[18px] mb-4">
             VIP Rd, Puri, Odisha-752002
           </div>
 
-          <div className="flex items-center gap-1 text-[14px] text-[#3538CD] mb-4">
+          <div className="flex items-center gap-1  mb-4">
+            <div className="mr-2 text-[12px] text-primary-blue font-airbnbCereal font-airbnbCereal-bold leadin-[15.6px] hover:underline">View property in map</div>
             <ExternalLink className="w-4 h-4" />
-            <button className="hover:underline">View property in map</button>
-            <span className="ml-2 text-[#475569]">34.32 KM from center</span>
+            <span className="ml-4 text-[12px] text-[#424242] font-airbnbCereal font-airbnbCereal-medium leading-[15.6px]">📍 34.32 KM from center</span>
           </div>
 
           <div className="flex gap-4 mb-4">
@@ -282,8 +282,8 @@ export default function HotelCard() {
                 height={16}
                 className="mr-[6px]"
               />
-              <span className="font-semibold text-base">4.5</span>
-              <span className="text-muted-foreground ml-1">(23 Reviews)</span>
+                   <span className="text-[16px] text-[#000] font-airbnbCereal font-airbnbCereal-medium leading-[20.83px]">4.5</span>
+                   <span className="text-[16px] text-[#626262] font-airbnbCereal font-airbnbCereal-small leading-[20.83px] ml-1">(23 Reviews)</span>
             </div>
           </div>
         </div>
