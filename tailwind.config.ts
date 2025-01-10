@@ -28,6 +28,8 @@ export default {
   		colors: {
         'primary-black': '#181A1E',
         'white': '#FFFFFF',
+        'primary-blue': '#5054D9',
+        'primary-grey': '#707070'
       }
   	}
   },

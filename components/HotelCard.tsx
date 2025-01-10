@@ -23,6 +23,11 @@ import {
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import cardImage from "../public/assets/image.png";
+import locationIcon from "../public/assets/location.png"
+import swimIcon from "../public/assets/SwimmingPool.png"
+import wifiIcon from "../public/assets/WifiHigh.png"
+import cityIcon from "../public/assets/city.png"
+import thumbIcon from "../public/assets/thumb_up.png"
 
 const hotelImages = [cardImage, cardImage, cardImage, cardImage];
 
@@ -102,7 +107,8 @@ export default function HotelCard() {
           </div>
 
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-            <MapPin className="w-4 h-4 color-blue" />
+            {/* <MapPin className="w-4 h-4 color-blue" /> */}
+            <Image src={locationIcon} alt="location" width={16} height={16} />
             <span className="text[14px] font-airbnbCereal font-airbnbCereal-small leading-[18px]">VIP Rd, City, Puri, Odisha 752001</span>
           </div>
 
@@ -113,21 +119,25 @@ export default function HotelCard() {
 
           <div className="flex gap-4 mb-4">
             <div className="flex items-center gap-1 text-sm">
-              <Wifi className="w-4 h-4" />
+              {/* <Wifi className="w-4 h-4" /> */}
+              <Image src={wifiIcon} alt="wifi" width={16} height={16} />
               <span>Free Wifi</span>
             </div>
             <div className="flex items-center gap-1 text-sm">
-              <Pool className="w-4 h-4" />
+              {/* <Pool className="w-4 h-4" /> */}
+              <Image src={swimIcon} alt="swim" width={16} height={16} />
               <span>Swimming Pool</span>
             </div>
             <div className="flex items-center gap-1 text-sm">
-              <Building2 className="w-4 h-4" />
+              {/* <Building2 className="w-4 h-4" /> */}
+              <Image src={cityIcon} alt="city" width={16} height={16} />
               <span>City View</span>
             </div>
           </div>
 
           <div className="flex items-center gap-2 mb-4">
-            <div className="flex items-center text-sm">
+            <div className="flex items-center text-[12px] font-airbnbCereal-small font-airbnbCereal bg-[#E1E1E159] bg-opacity-[.35] rounded-[7px] px-[6px] py-[4px]">
+            <Image src={thumbIcon} alt="like" width={16} height={16} className="mr-[6px]"/>
               <span className="font-semibold text-base">4.5</span>
               <span className="text-muted-foreground ml-1">(23 Reviews)</span>
             </div>
@@ -135,10 +145,10 @@ export default function HotelCard() {
 
           <div className="flex items-center justify-between pt-4 border-t">
             <div>
-              <span className="text-2xl font-bold">₹31,440.87</span>
-              <span className="text-sm text-muted-foreground">/3 nights</span>
+              <span className="text-[16px] font-airbnbCereal font-airbnbCereal-bold text-primary-blue">₹31,440.87</span>
+              <span className="text-[16px] font-airbnbCereal font-airbnbCereal-small text-primary-grey">/3 nights</span>
             </div>
-            <Button className="rounded-full">Choose Room</Button>
+            <Button className="font-airbnbCereal font-airbnbCereal-medium leading-[18px] rounded-[4px] bg-white text-primary-blue border border-[#5054D9]">Choose Room</Button>
           </div>
         </div>
       </Card>
